@@ -1,0 +1,84 @@
+.site-header {
+  background: 225,225,225;
+}
+
+.heading-group-h1 {
+  float: left;
+  padding: 0 0 .2em 1em;
+}
+
+.icon-menu {
+  font-size:2em;
+  text-align: right;
+  padding-right: 1em;
+}
+
+.main-nav {
+  padding: 0.1em;
+}
+
+.main-nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.main-nav:hover ul {
+  display: block;
+}
+
+.main-nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .5em .2em;
+ 
+}
+
+/*WORK & PROJECTS STYLE*/
+#work_intro{
+  background-color: rgb(248, 248, 248);
+  height: 600px;
+  width: 470px;
+}
+
+.work_title{
+color:rgb(28,27,32);
+font-size:75px;
+font-weight: bolder;
+}
+
+/*.period{
+color:rgb(216, 216, 216);
+font-size:75px;
+}*/
+
+#projects_intro{
+  background-color: rgb(28,27,32);
+  height: 600px;
+  width: 470px;
+}
+
+#projects_section_title{
+  color:rgb(248, 248, 248);
+  font-weight: bolder;
+  font-size: 45px;
+  
+}
+
+
+@media only screen and (min-width:640px){
+  .icon-menu{
+    display:none;
+  }
+  .main-nav ul {
+    display:block;
+   
+  }
+  .main-nav li {
+    display:inline-block;
+    border: none;
+    padding-right: 10%;
+    
+  }
+}
