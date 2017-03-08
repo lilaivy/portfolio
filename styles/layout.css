@@ -1,6 +1,16 @@
+#landing_container{
+    background-color:rgb(225, 88, 81);
+}
 #work_intro{
     display: inline-block;
 }
-#projects_intro{
+#portfolio_intro{
     display: inline-block;
+}
+.total_presentation{
+    display: inline-block;
+}
+#project_images{
+    display: inline-block;
+    padding-top: 60px;
 }

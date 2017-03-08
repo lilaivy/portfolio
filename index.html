@@ -21,20 +21,50 @@
       <nav class="main-nav">
         <div class='icon-menu'></div>
         <ul>
-          <li class="tab"><a href="index.html" class="icon-minus"> Home</a></li>
+          <li class="tab"><a href="index.html"class="icon-minus"> Home</a></li>
           <li class="tab"><a href="about.html" class="icon-plus"> About</a></li>
           <li class="tab"><a href="https://github.com/lilaivy" class="icon-github"> Github</a></li>
           <li class="tab"><a href="https://www.linkedin.com/in/ivy-patton-655b2820/" class="icon-link"> LinkedIn</a></li>
         </ul>
       </nav>
     </header>
-    <div id="work_intro">
-      <span class="work_title">WO</span><br>
-      <span class="work_title">RK<class="period">.</span>
+    <div id = 'landing_container'>
+      <div id="work_intro">
+        <h1>
+        <span class="work_title">WO</span><br>
+        <span class="work_title">RK<class="period">.</span>
+        </h1>
+      </div>
+      <div id="portfolio_intro">
+        <h2 id="portfolio_section_title">A selection of digital projects.</h2>
+      </div> 
     </div>
-    <div id="projects_intro">
-      <h2 id="projects_section_title">A selection of digital projects.</h2>
-    </div> 
+
+    <!--Left column project overview-->
+<section id="project_intro">
+    <div class="total_presentation">
+      <span class="project_date">Month 2017</span>
+      <span><h2 class="project_title">Project Title</h2></span>
+      <ul id="specs">
+        <li class="detail" id="goal"></li>
+        <li class="detail" id="type"></li>
+        <li class="detail" id="technology"></li>
+      </ul>
+      <a href="">Launch Project</a>
+    </div>
+
+    <!--Right column project images-->
+  <div id="project_images">
+    <img class="screenshot" src="vendor/screenshots/game_page.png">
+  </div>
+</section>
+
+
+    <script>src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"</script>
+  <script>src="scripts/source.js"</script>
+  <script>src="scripts/app.js"</script>
 </body>
 </html>
 
