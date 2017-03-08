@@ -1,7 +1,13 @@
 
 body {
-  font-size: 100%;
+ font-size: 100%;
  font-family: 'Josefin Sans', sans-serif;
+ text-align: center;
+ 
+}
+
+img{
+  max-width: 100%;
 }
 
 /*LINK STYLES*/
