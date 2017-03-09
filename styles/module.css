@@ -66,6 +66,10 @@ font-size:75px;
   
 }
 
+.template{
+  display: none;
+}
+
 #project_images{
    background-color:rgb(65,74,107);
    height: 600px;

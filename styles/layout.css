@@ -1,7 +1,7 @@
 #landing_container{
     background-color:rgb(225, 88, 81);
 }
-#work_intro{
+/*#work_intro{
     display: inline-block;
 }
 #portfolio_intro{
@@ -13,4 +13,11 @@
 #project_images{
     display: inline-block;
     padding-top: 60px;
-}
+}*/
+
+/*.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
