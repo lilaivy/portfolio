@@ -11,19 +11,20 @@ function Projects (ivy_projects) {
   this.technology = ivy_projects.technology;
 };
 
-Projects.prototype.toHtml =function(){
-  var $newProject = $('div.total_presentation').clone;
-  $newProject.find('.project_date').text(this.date);
-  $newProject.find('h2.project_title').text(this.title);
-  $newProject.removeClass('total_presentation'); 
-  return $newProject;
+Projects.prototype.toHtml =function() {
+  var source = $('#entry-template').html();
+  var template = Handlebars.compile(source);
+  var html = template(this);
+  return html;
 };
+
 
 // Push my projects into an array
 ivy_projects.forEach(function(ele) {
   projects.push(new Projects(ele));
 });
 
+
 projects.forEach(function(project){
-  $('#project_intro').append(project.toHtml());
+  $('#render_template').append(project.toHtml());
 });

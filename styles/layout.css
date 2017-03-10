@@ -2,15 +2,28 @@
     background-color:rgb(225, 88, 81);
 }
 #work_intro{
-    display: inline-block;
+    float:left;
 }
 #portfolio_intro{
-    display: inline-block;
+   float:left;
 }
 .total_presentation{
-    display: inline-block;
+    float:left;
 }
 #project_images{
-    display: inline-block;
-    padding-top: 60px;
+    float:left;
+
 }
+
+#project_intro{
+    clear: both;
+    display:block;
+}
+
+
+/*.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}*/
+
