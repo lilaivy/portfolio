@@ -12,6 +12,26 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <!-- HANDLEBARS TEMPLATE -->
+    <script id="entry-template" type="text/x-handlebars-template">
+      <section id="project_intro">
+         <!-- LEFT COLUMN -->
+        <div class="total_presentation">
+          Completed in<span class="date">{{this.date}}</span>
+          <span><h2 class="project_title">{{this.title}}</h2></span>
+          <ul id="specs">
+            <li class="detail" id="goal">{{this.goal}}</li>
+            <li class="detail" id="type">{{this.type}}</li>
+            <li class="detail" id="technology">{{this.technology}}</li>
+          </ul>
+      <a class="launch_link" href="{{this.link}}">Launch Project</a>
+      </div>
+   <!-- RIGHT COLUMN -->
+    <div id="project_images">
+      <img class="screenshot" src="{{this.screenshot}}">
+    </div>
+      </section>
+    </script>
 </head>
  <body>
     <header class="site-header clearfix">
@@ -30,7 +50,7 @@
     </header>
     <div id = 'landing_container'>
       <div id="work_intro">
-        <h1>
+        <h1 id="work_title">
         <span class="work_title">WO</span><br>
         <span class="work_title">RK<class="period">.</span>
         </h1>
@@ -40,29 +60,13 @@
       </div> 
     </div>
 
-    <!--Left column project overview-->
-<section id="project_intro">
-    <div class="template total_presentation" >
-      <span class="project_date">Month 2017</span>
-      <span><h2 class="project_title">Project Title</h2></span>
-      <ul id="specs">
-        <li class="detail" id="goal"></li>
-        <li class="detail" id="type"></li>
-        <li class="detail" id="technology"></li>
-      </ul>
-      <a class="launch_link" href="#">Launch Project</a>
-
-    <!--Right column project images-->
-    <div id="project_images">
-      <img class="screenshot" src=>
-    </div>
-  </div>
-</section>
+<section id="render_template"></section>
 
 
    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
   <script src="scripts/source.js"></script>
   <script src="scripts/app.js"></script>
 </body>

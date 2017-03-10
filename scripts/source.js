@@ -13,7 +13,7 @@ var ivy_projects = [
   {
     title:'BusMall',
     date:'February 2017',
-    screenshot:['vendor/screenshots/busMall_main.png','vendor/screenshots/chart.png'],
+    screenshot:'vendor/screenshots/busMall_main.png',
     link:'https://lilaivy.github.io/bus_mall/',
     goal:'Collect & present market research for magazine launch', //Local Storage, eventHandlers
     type: 'Solo project | CodeFellows',
@@ -23,7 +23,7 @@ var ivy_projects = [
   {
     title:'Seattle Cookies',
     date:'February 2017',
-    screenshot:['vendor/screenshots/busMall_main.png','vendor/screenshots/chart.png'], //replace with proper screenshot
+    screenshot:'vendor/screenshots/busMall_main.png', //replace with proper screenshot
     link:'https://lilaivy.github.io/salmon_cookies/',
     goal:'Design & develop cookie store web site & present sales data to biz admin', //DOM manipulation
     type: 'Solo project | CodeFellows',

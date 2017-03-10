@@ -12,16 +12,10 @@ function Projects (ivy_projects) {
 };
 
 Projects.prototype.toHtml =function() {
-  var $newProject = $('div.template').clone();
-  $newProject.find('.project_date').text(this.date);
-  $newProject.find('.project_title').text(this.title);
-  $newProject.find('#goal').text(this.goal);
-  $newProject.find('#type').text(this.type);
-  $newProject.find('#technology').text(this.technology);
-  $newProject.find('.launch_link').attr(this.link);
-  $newProject.find('.screenshot').attr('src =' + this.screenshot);
-  $newProject.removeClass('template'); 
-  return $newProject;
+  var source = $('#entry-template').html();
+  var template = Handlebars.compile(source);
+  var html = template(this);
+  return html;
 };
 
 
@@ -32,5 +26,5 @@ ivy_projects.forEach(function(ele) {
 
 
 projects.forEach(function(project){
-  $('#project_intro').append(project.toHtml());
+  $('#render_template').append(project.toHtml());
 });
