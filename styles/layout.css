@@ -1,6 +1,8 @@
 #landing_container{
     background-color:rgb(225, 88, 81);
+
 }
+
 #work_intro{
     float:left;
 }
@@ -21,9 +23,9 @@
 }
 
 
-/*.clearfix::after {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
-}*/
+}
 
