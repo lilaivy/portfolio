@@ -41,25 +41,38 @@
       <nav class="main-nav">
         <div class='icon-menu'></div>
         <ul>
-          <li class="tab"><a href="index.html"class="icon-minus"> Home</a></li>
-          <li class="tab"><a href="about.html" class="icon-plus"> About</a></li>
+          <li class="tab" data-tab-content="home"><a href="#"class="icon-minus"> Home</a></li>
+          <li class="tab" data-tab-content="about"><a href="#" class="icon-plus"> About</a></li>
           <li class="tab"><a href="https://github.com/lilaivy" class="icon-github"> Github</a></li>
           <li class="tab"><a href="https://www.linkedin.com/in/ivy-patton-655b2820/" class="icon-link"> LinkedIn</a></li>
         </ul>
       </nav>
     </header>
-    <div id="landing_container" class="clearfix">
-      <div id="work_intro">
-        <h1 id="work_title">
+    <div id="home" class="container clearfix">
+      <div class="intro">
+        <h1 class="title">
         <span class="work_title">WO</span><br>
         <span class="work_title">RK<class="period">.</span>
         </h1>
       </div>
-      <div id="portfolio_intro">
-        <h2 id="portfolio_section_title">A selection of digital projects.</h2>
+      <div class="right_column_container">
+        <h2 class="right_column_title">A selection of digital projects.</h2>
       </div> 
     </div>
 
+    <div id="about" class="container clearfix">
+      <div class="intro">
+        <h1 class="title">
+        <span class="work_title">LI</span><br>
+        <span class="work_title">LA<class="period">.</span>
+        </h1>
+      </div>
+      <div class="right_column_container">
+        <h2 class="right_column_title">My story</h2>
+      </div> 
+    </div>
+
+<!-- if you want to hide the projects, add class container to it -->
 <section id="render_template"></section>
 
 

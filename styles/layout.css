@@ -1,12 +1,11 @@
-#landing_container{
+.container {
     background-color:rgb(225, 88, 81);
-
 }
 
-#work_intro{
+.intro {
     float:left;
 }
-#portfolio_intro{
+.right_column_container {
    float:left;
 }
 .total_presentation{
