@@ -31,8 +31,8 @@ function mainNavHandler() {
 // Push my projects into an array
 
 //creating a variable for my function that pushes my projects into an array. I'm getting these projects from the results of my AJAX call. It should be an array of objects.
-Projects.loadAll = function (rawDataJSON) {
-  rawDataJSON.forEach(function(ele) {
+Projects.loadAll = function (project_data) {
+  project_data.forEach(function(ele) {
     Projects.all.push(new Projects(ele));
   });
 
@@ -44,9 +44,9 @@ Projects.loadAll = function (rawDataJSON) {
 
     mainNavHandler();
   };
-// };
+};
 
-  Projects.fetchAll = function() {
+Projects.fetchAll = function() {
   //This part of the function tells the program what to do if there is anything in LocalStorage.  I do no understand where rawData came from in the lab code. I assumed it was a property on localStorage
     if (localStorage.rawData) {
     //I'm parsing out the stringified JSON data so that it returns to me as an object and storing it on a variable called parsedData.  Again, I assumed that rawData was a property on localStorage, I am not clear about what rawData represents
@@ -68,12 +68,12 @@ Projects.loadAll = function (rawDataJSON) {
         //I'm setting the items on local storage and giving the variable rawData the valie of rawDataJSON
           localStorage.setItem('rawData', rawDataJSON);
         //Should I be calling loadAll here?
-          Projects.fetchAll();
+          Projects.loadAll(data);
+          initIndexPage();
+
         }, 
         error: function(err){
           console.log('in error handler', err);
         }
-      });
-    }
+      }); 
   };
-};
