@@ -77,6 +77,14 @@ font-size:75px;
   
 }
 
+#bio_title{
+  line-height: 100px;
+}
+
+ p .right_column_text{
+  line-height: 25px;
+}
+
 
 #project_images{
    background-color:rgb(65,74,107);

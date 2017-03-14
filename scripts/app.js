@@ -1,5 +1,4 @@
 'use strict';
-var projects = [];
 
 function Projects (ivy_projects) {
   this.title = ivy_projects.title;
@@ -10,6 +9,8 @@ function Projects (ivy_projects) {
   this.type = ivy_projects.type;
   this.technology = ivy_projects.technology;
 };
+
+Projects.all = [];
 
 Projects.prototype.toHtml =function() {
   var source = $('#entry-template').html();
@@ -28,13 +29,38 @@ function mainNavHandler() {
 }
 
 // Push my projects into an array
-ivy_projects.forEach(function(ele) {
-  projects.push(new Projects(ele));
-});
+// Projects.All.loadAll = function () {
+ data.forEach(function(ele) {
+    Projects.all.push(new Projects(ele));
+  });
 
+  var initIndexPage = function() {
+    Projects.all.forEach(function(project){
+      $('#render_template').append(project.toHtml());
+    });
 
-projects.forEach(function(project){
-  $('#render_template').append(project.toHtml());
-});
+    mainNavHandler();
+  };
+};
 
-mainNavHandler();
+Projects.fetchAll = function() {
+  if (localStorage.rawData) {
+    var parsedData = JSON.parse(localStorage.rawData);
+    Projects.loadAll(parsedData);
+    // initIndexPage();
+  } 
+  else{
+    $.ajax({
+      url: 'data/source.json',
+      method:'GET',
+      success: function(data){
+        var rawDataJSON = JSON.stringify(data);
+        localStorage.setItem('rawData', rawDataJSON);
+        Projects.fetchAll();
+      }, 
+      error: function(err){
+        console.log('in error handler', err);
+      }
+    });
+  }
+};
