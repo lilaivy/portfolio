@@ -31,5 +31,3 @@ var ivy_projects = [
   },
 
 ];
-
-  
