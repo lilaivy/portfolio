@@ -48,32 +48,33 @@ Projects.loadAll = function (project_data) {
 
 Projects.fetchAll = function() {
   //This part of the function tells the program what to do if there is anything in LocalStorage.  I do no understand where rawData came from in the lab code. I assumed it was a property on localStorage
-    if (localStorage.rawData) {
+  if (localStorage.rawData) {
     //I'm parsing out the stringified JSON data so that it returns to me as an object and storing it on a variable called parsedData.  Again, I assumed that rawData was a property on localStorage, I am not clear about what rawData represents
-      var parsedData = JSON.parse(localStorage.rawData);
+    var parsedData = JSON.parse(localStorage.rawData);
     //I'm calling the function Projects.loadAll and passing it the paredData
-      Projects.loadAll(parsedData);
+    Projects.loadAll(parsedData);
     // initIndexPage();
-    }else{
+  }else{
     //if there is nothing in LocalStorage, I'm making an ajax call to retrieve my source data from the server
-      $.ajax({
+    $.ajax({
       //this is the path to the source data.  I'm making the request here.
-        url: 'data/source.json',
+      url: 'data/source.json',
       //I'm using the GET method to make this request.
-        method:'GET',
+      method:'GET',
       //I'm writing a function with the parameter of data
-        success: function(data){
+      success: function(data){
         //I'm stringifying data and storing that stringified data on the variable rawDataJSON
-          var rawDataJSON = JSON.stringify(data);
+        var rawDataJSON = JSON.stringify(data);
         //I'm setting the items on local storage and giving the variable rawData the valie of rawDataJSON
-          localStorage.setItem('rawData', rawDataJSON);
+        localStorage.setItem('rawData', rawDataJSON);
         //Should I be calling loadAll here?
-          Projects.loadAll(data);
-          initIndexPage();
+        Projects.loadAll(data);
+        initIndexPage();
 
-        }, 
-        error: function(err){
-          console.log('in error handler', err);
-        }
-      }); 
-  };
+      }, 
+      error: function(err){
+        console.log('in error handler', err);
+      }
+    }); 
+  }
+};
