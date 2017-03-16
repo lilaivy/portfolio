@@ -14,7 +14,7 @@
     "date":"February 2017",
     "screenshot":"vendor/screenshots/busMall_main.png",
     "link":"https://lilaivy.github.io/bus_mall/",
-    "goal":"Collect & present market research for magazine launch', //Local Storage, eventHandlers",
+    "goal":"Collect & present market research for magazine launch",
     "type": "Solo project | CodeFellows",
     "technology": "HTML, CSS, Javascript, Charts.JS"
   },
@@ -22,7 +22,7 @@
   {
     "title":"Seattle Cookies",
     "date":"February 2017",
-    "screenshot":"vendor/screenshots/busMall_main.png', //replace with proper screenshot",
+    "screenshot":"vendor/screenshots/busMall_main.png",
     "link":"https://lilaivy.github.io/salmon_cookies/",
     "goal":"Design & develop cookie store web site & present sales data to biz admin', //DOM manipulation",
     "type": "Solo project | CodeFellows",
