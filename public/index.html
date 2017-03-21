@@ -41,8 +41,9 @@
       <nav class="main-nav">
         <div class='icon-menu'></div>
         <ul>
-          <li class="tab" data-tab-content="home"><a href="#"class="icon-minus"> Home</a></li>
-          <li class="tab" data-tab-content="about"><a href="#" class="icon-plus"> About</a></li>
+          <li class="tab" data-tab-content="home"><a href="/home"class="icon-minus"> Home</a></li>
+          <li class="tab" data-tab-content="work"><a href="/work" class="icon-plus"> Work</a></li>
+          <li class="tab" data-tab-content="about"><a href="/about" class="icon-plus"> About</a></li>
           <li class="tab"><a href="https://github.com/lilaivy" class="icon-github"> Github</a></li>
           <li class="tab"><a href="https://www.linkedin.com/in/ivy-patton-655b2820/" class="icon-link"> LinkedIn</a></li>
         </ul>
@@ -61,7 +62,7 @@
         <h2 class="right_column_title"></h2>
       </div> 
     </div>-->
-    <div id="home" class="container clearfix">
+    <div id="work" class="container clearfix">
       <div class="intro">
         <h1 class="title">
         <span class="work_title">WO</span><br>
@@ -86,16 +87,32 @@
       </div> 
     </div>
 
+    <div id="home" class="container clearfix">
+      <div class="intro">
+        <h1 class="title">
+        <span class="work_title">HE</span><br>
+        <span class="work_title">LLO<class="period">.</span>
+        </h1>
+      </div>
+      <div class="right_column_container">
+        <h2 id="bio_title"class="right_column_title">My name is Ivy.<br>I'm a front end-developer.<br>I'm also a project manager.</h2>
+      </div> 
+    </div>
+
 <!-- if you want to hide the projects, add class container to it -->
 <section id="render_template"></section>
 
-
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
   <script src="scripts/models/app.js"></script>
-  <script>Projects.fetchAll();</script>
+  <script src="scripts/controller/aboutController.js"></script>
+   <script src="scripts/controller/projectController.js"></script>
+    <script src="scripts/controller/homeController.js"></script>
+    <script src="scripts/controller/routes.js"></script>
+
 </body>
 </html>
 
