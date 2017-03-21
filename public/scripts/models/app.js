@@ -19,15 +19,15 @@ Projects.prototype.toHtml =function() {
   return html;
 };
 
-function mainNavHandler() {
-  $('.main-nav').on('click', '.tab', function() {
-    $('.container').hide();
-    var clickedId = $(this).attr('data-tab-content');
-    $('#' + clickedId).fadeIn(2000);
-  });
-  $('.main-nav .tab:first').click();
-}
-mainNavHandler();
+// function mainNavHandler() {
+//   $('.main-nav').on('click', '.tab', function() {
+//     $('.container').hide();
+//     var clickedId = $(this).attr('data-tab-content');
+//     $('#' + clickedId).fadeIn(2000);
+//   });
+//   $('.main-nav .tab:first').click();
+// }
+// mainNavHandler();
 
 
 Projects.loadAll = function (project_data) {
