@@ -38,15 +38,15 @@
 
 /*WORK & PROJECTS INTRO STYLE*/
 
-.intro, .total_presentation{
+.intro, .project_left_column{
   background-color: rgb(248, 248, 248);
   height: 600px;
   width: 470px;
 }
 
-/* .title {
+ .title {
   padding-top: 150px;
-}*/
+}
 
 .work_title{
 color:rgb(28,27,32);
@@ -74,6 +74,8 @@ font-size:75px;
   color:rgb(248, 248, 248);
   font-weight: bolder;
   font-size: 45px;
+   line-height: 100px;
+  padding-top: 100px;
   
 }
 
@@ -81,8 +83,17 @@ font-size:75px;
   line-height: 100px;
 }
 
- p .right_column_text{
+#story_prongs{
+  padding-top: 35px;
+  margin-bottom: 0px;
+}
+
+ .right_column_text{
   line-height: 25px;
+  padding-left: 22px;
+  padding-right: 22px;
+  margin: 0px;
+  font-size: 17px;
 }
 
 
@@ -95,11 +106,15 @@ font-size:75px;
 .screenshot{
   height: 480px;
   width: 380px;
-  padding-bottom: 50px;
+  padding-top: 55px;
 }
 
 
 @media only screen and (min-width:640px){
+   .container {
+     padding-left: 350px;
+  }
+
   .icon-menu{
     display:none;
   }
