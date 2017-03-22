@@ -12,7 +12,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <!-- HANDLEBARS TEMPLATE -->
+    <!-- HANDLEBARS PROJECT TEMPLATE -->
     <script id="entry-template" type="text/x-handlebars-template">
       <section id="project_intro">
          <!-- LEFT COLUMN -->
@@ -32,6 +32,29 @@
       <img class="screenshot" src="{{this.screenshot}}">
     </div>
       </section>
+    </script>
+     <!-- HANDLEBARS REPO TEMPLATE -->
+    <script id="repo-template" type="text/x-handlebars-template">
+      <div class="project_left_column">
+        Completed in<span class="date">{{created}}</span>
+        <span><h2 class="project_title">{{name}}</h2></span>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <ul id="specs">
+            <li class="detail" id="goal">{{description}}</li>
+            <li class="detail" id="type">{{updated_at}</li>
+            <li class="detail" id="technology">{{language}}</li>
+          </ul>
+      <a class="launch_link" href="{{html_url}}" target="_blank">Launch Project</a>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </div>
+         <!-- RIGHT COLUMN -->
+    <div id="project_images" style="height: 600px" style="width: 460px">
+      <img class="screenshot" >
+    </div>
+      </section>
+    </script>
     </script>
 </head>
  <body>
@@ -103,12 +126,14 @@
 <!-- if you want to hide the projects, add class container to it -->
 <section id="render_template" class="container"></section>
 
-  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+   <script src="scripts/models/githubToken.js"></script>
   <script src="scripts/models/app.js"></script>
+  <script src="scripts/models/repos.js"></script>
   <script src="scripts/controller/aboutController.js"></script>
    <script src="scripts/controller/projectController.js"></script>
     <script src="scripts/controller/homeController.js"></script>
