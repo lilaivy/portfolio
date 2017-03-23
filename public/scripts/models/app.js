@@ -19,17 +19,6 @@ Projects.prototype.toHtml =function() {  //move into repo view or do I make a 2n
   return html;
 };
 
-// function mainNavHandler() {
-//   $('.main-nav').on('click', '.tab', function() {
-//     $('.container').hide();
-//     var clickedId = $(this).attr('data-tab-content');
-//     $('#' + clickedId).fadeIn(2000);
-//   });
-//   $('.main-nav .tab:first').click();
-// }
-// mainNavHandler();
-
-
 Projects.loadAll = function (project_data) {
   project_data.map(function(ele) {
     Projects.all.push(new Projects(ele));

@@ -15,6 +15,7 @@
     .then((result) => {
       result.map(function(ele) {
         repos.all.push(ele)
+        console.log(repos.all);
         callback();  //you must call the callback here so that data exists to load??
       })
     })
