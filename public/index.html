@@ -12,11 +12,11 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-    <!-- HANDLEBARS TEMPLATE -->
+    <!-- HANDLEBARS PROJECT TEMPLATE -->
     <script id="entry-template" type="text/x-handlebars-template">
       <section id="project_intro">
          <!-- LEFT COLUMN -->
-        <div class="total_presentation">
+        <div class="project_left_column">
           Completed in<span class="date">{{this.date}}</span>
           <span><h2 class="project_title">{{this.title}}</h2></span>
           <ul id="specs">
@@ -26,9 +26,32 @@
           </ul>
       <a class="launch_link" href="{{this.link}}">Launch Project</a>
       </div>
+
    <!-- RIGHT COLUMN -->
     <div id="project_images">
       <img class="screenshot" src="{{this.screenshot}}">
+    </div>
+      </section>
+    </script>
+     <!-- HANDLEBARS REPO TEMPLATE -->
+    <script id="repo-template" type="text/x-handlebars-template">
+    <section id="repo_intro">
+      <div class="project_left_column">
+        <span><h2 class="project_title">{{name}}</h2></span>
+        <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
+        <ul id="specs">
+            <li class="detail" id="goal">{{description}}</li>
+            <li class="detail" id="type">{{updated_at}}</li>
+            <li class="detail" id="technology">{{language}}</li>
+          </ul>
+      <a class="launch_link" href="{{html_url}}" target="_blank">Go To GitHub Repo</a>
+        {{#if watchers_count}}
+          <p>{{watchers_count}} watching this repo</p>
+        {{/if}}
+      </div>
+         <!-- RIGHT COLUMN -->
+    <div id="project_images" style="height: 600px" style="width: 460px">
+      <img class="screenshot" >
     </div>
       </section>
     </script>
@@ -36,32 +59,19 @@
  <body>
     <header class="site-header">
       <section class="heading-group-h1">
-        <h1>Ivy Patton | Projects</h1> 
+        <h1>Ivy Patton | Developer</h1> 
       </section>
       <nav class="main-nav">
         <div class='icon-menu'></div>
         <ul>
           <li class="tab" data-tab-content="home"><a href="/home"class="icon-minus"> Home</a></li>
-          <li class="tab" data-tab-content="work"><a href="/work" class="icon-plus"> Work</a></li>
           <li class="tab" data-tab-content="about"><a href="/about" class="icon-plus"> About</a></li>
+          <li class="tab" data-tab-content="work"><a href="/work" class="icon-plus"> Work</a></li>
           <li class="tab"><a href="https://github.com/lilaivy" class="icon-github"> Github</a></li>
           <li class="tab"><a href="https://www.linkedin.com/in/ivy-patton-655b2820/" class="icon-link"> LinkedIn</a></li>
         </ul>
       </nav>
     </header>
-    <!--<div id="hello_left_column" class="container clearfix">
-      <div class="intro right hello">
-        <div id="hello_text"
-        <h1 class="title">
-        <span class="work_title">HE</span><br>
-        <span class="work_title">LLO<class="period">.</span>
-        </h1>
-        </div>
-      </div>
-      <div id="hello_right_column"class="right_column_container">
-        <h2 class="right_column_title"></h2>
-      </div> 
-    </div>-->
     <div id="work" class="container clearfix">
       <div class="intro">
         <h1 class="title">
@@ -77,13 +87,13 @@
     <div id="about" class="container clearfix">
       <div class="intro">
         <h1 class="title">
-        <span class="work_title">HE</span><br>
-        <span class="work_title">LLO<class="period">.</span>
+        <span class="work_title">STO</span><br>
+        <span class="work_title">RY<class="period">.</span>
         </h1>
       </div>
       <div class="right_column_container">
-        <h2 id="bio_title"class="right_column_title">My name is Ivy.<br> I'm a front end-developer.</h2>
-          <p class="right_column_text">My story is three-pronged: I am southern born, NYC bred, and PDX at heart. Philosophy and Literature were my my majors, and I upped the Liberal Arts anty with a minor in film. Naturally, after graduation I hightailed it to NYC to get my PhD in RocknRoll. I earned it in 4 years of sleepless nights at Warner Bros. Records, where I specialized in promotions and A&R. Before that I wrote TV trivia questions. And before that I was a PA & interned at Late Show with David Letterman. So, a top ten list is only fitting:</p>
+       <h2 id="story_prongs"class="right_column_title">Southern born.<br>NYC bred.<br>PDX @ heart.</h2>
+          <p class="right_column_text">Philosophy and Literature were my my majors. Film was my minor. After graduation I earned my PhD in RocknRoll from Warner Bros Records where I specialized in promotions and A&R. Before that I did market research for Neilsen. And before that I was an intern at Late Show with David Letterman.<br> I also taught writing to kids with Dyslexia in Oregon...<br><span class="another_story">but that's another story.<span></p></p>
       </div> 
     </div>
 
@@ -95,19 +105,24 @@
         </h1>
       </div>
       <div class="right_column_container">
-        <h2 id="bio_title"class="right_column_title">My name is Ivy.<br>I'm a front end-developer.<br>I'm also a project manager.</h2>
+        <h2 id="bio_title"class="right_column_title">My name is Ivy.<br>I'm a developer.</h2>
       </div> 
     </div>
 
 <!-- if you want to hide the projects, add class container to it -->
-<section id="render_template"></section>
+<section id="render_template" class="container"></section>
+<section id="render_repo_template" class="container"></section>
 
-  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js"></script>
+  <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+   <script src="scripts/models/githubToken.js"></script>
   <script src="scripts/models/app.js"></script>
+  <script src="scripts/models/repos.js"></script>
+  <script src="scripts/views/repoView.js"></script>
   <script src="scripts/controller/aboutController.js"></script>
    <script src="scripts/controller/projectController.js"></script>
     <script src="scripts/controller/homeController.js"></script>

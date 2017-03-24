@@ -8,8 +8,15 @@
 .right_column_container {
    float:left;
 }
-.total_presentation{
+.project_left_column{
     float:left;
+   
+}
+
+
+.project_left_column h2{
+    padding-top:100px;
+   
 }
 #project_images{
     float:left;

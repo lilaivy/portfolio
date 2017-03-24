@@ -12,38 +12,27 @@ function Projects (ivy_projects) {
 
 Projects.all = [];
 
-Projects.prototype.toHtml =function() {
+Projects.prototype.toHtml =function() {  //move into repo view or do I make a 2nd template?
   var source = $('#entry-template').html();
   var template = Handlebars.compile(source);
   var html = template(this);
   return html;
 };
 
-// function mainNavHandler() {
-//   $('.main-nav').on('click', '.tab', function() {
-//     $('.container').hide();
-//     var clickedId = $(this).attr('data-tab-content');
-//     $('#' + clickedId).fadeIn(2000);
-//   });
-//   $('.main-nav .tab:first').click();
-// }
-// mainNavHandler();
-
-
 Projects.loadAll = function (project_data) {
-  project_data.forEach(function(ele) {
+  project_data.map(function(ele) {
     Projects.all.push(new Projects(ele));
   });
 
  
-  Projects.all.forEach(function(p){
+  Projects.all.map(function(p){
     $('#render_template').append(p.toHtml());
   });
   
 };
 
 Projects.fetchAll = function() {
-  if (localStorage.rawData) {
+  if (localStorage.rawData) {    //should I ditch this local storage code now?
     var parsedData = JSON.parse(localStorage.rawData);
     Projects.loadAll(parsedData);
   }else{
