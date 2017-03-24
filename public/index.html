@@ -37,7 +37,6 @@
     <script id="repo-template" type="text/x-handlebars-template">
     <section id="repo_intro">
       <div class="project_left_column">
-        Completed in<span class="date">{{created}}</span>
         <span><h2 class="project_title">{{name}}</h2></span>
         <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
         <ul id="specs">
@@ -45,7 +44,7 @@
             <li class="detail" id="type">{{updated_at}}</li>
             <li class="detail" id="technology">{{language}}</li>
           </ul>
-      <a class="launch_link" href="{{html_url}}" target="_blank">Launch Project</a>
+      <a class="launch_link" href="{{html_url}}" target="_blank">Go To GitHub Repo</a>
         {{#if watchers_count}}
           <p>{{watchers_count}} watching this repo</p>
         {{/if}}
@@ -73,19 +72,6 @@
         </ul>
       </nav>
     </header>
-    <!--<div id="hello_left_column" class="container clearfix">
-      <div class="intro right hello">
-        <div id="hello_text"
-        <h1 class="title">
-        <span class="work_title">HE</span><br>
-        <span class="work_title">LLO<class="period">.</span>
-        </h1>
-        </div>
-      </div>
-      <div id="hello_right_column"class="right_column_container">
-        <h2 class="right_column_title"></h2>
-      </div> 
-    </div>-->
     <div id="work" class="container clearfix">
       <div class="intro">
         <h1 class="title">
