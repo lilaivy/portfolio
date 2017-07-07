@@ -9,7 +9,7 @@
     $.ajax('https://api.github.com/users/lilaivy/repos', {
       method: 'GET',
       headers: {
-        Authorization: `token ${token}`
+        Authorization: `token ${process.env.token}`
       }
     })
     .then((result) => {
